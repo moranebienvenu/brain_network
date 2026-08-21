@@ -1,0 +1,26 @@
+# Dashboard
+dash
+plotly
+
+# Data
+pandas
+numpy
+
+# Statistics
+scipy
+statsmodels
+
+# Brain / neuroimaging visualization
+mne
+nibabel
+
+# 3D rendering used by MNE  -- not used anymore
+# pyvista
+# pyvistaqt
+# vtk
+
+# Matplotlib is still needed for the static MNE brain rendering
+matplotlib
+
+# Production server
+gunicorn

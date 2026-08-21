@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environnements Python
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Freesurfer
+mne_data/fsaverage/
