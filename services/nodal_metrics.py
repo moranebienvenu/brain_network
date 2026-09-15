@@ -7,7 +7,7 @@ def get_nodal_values(
     method,
     feature,
     density,
-    parcellation="500.aparc",
+    parcellation
 ):
     """
     Select nodal values for one method, density and feature.
@@ -33,8 +33,8 @@ def get_top_regions(
     method,
     feature,
     density,
-    n_regions=15,
-    parcellation="500.aparc",
+    parcellation,
+    n_regions=15   
 ):
     """
     Return regions showing the largest absolute differences
@@ -62,13 +62,87 @@ def get_top_regions(
 
     return selected.head(n_regions)
 
+def get_top_regions_across_densities(
+    dataframe,
+    method,
+    feature,
+    parcellation,
+    top_n=15,
+):
+    """
+    Select the top Gifted and Control regions
+    based on their mean difference across densities. 
+    This function is called to generate the heatmaps
+    """
+
+    selected = dataframe[
+        (dataframe["Method"] == method)
+        & (dataframe["Feature"] == feature)
+        & (dataframe["Parcellation"] == parcellation)
+    ].copy()
+
+    region_summary = (
+        selected
+        .groupby("Region", as_index=False)
+        .agg(
+            mean_diff=(
+                "Diff_gifted_minus_controls",
+                "mean",
+            ),
+            mean_abs_diff=(
+                "Diff_gifted_minus_controls",
+                lambda x: np.mean(np.abs(x)),
+            ),
+            std_diff=(
+                "Diff_gifted_minus_controls",
+                "std",
+            ),
+        )
+    )
+
+    top_gifted_regions = (
+        region_summary
+        .sort_values(
+            "mean_diff",
+            ascending=False,
+        )
+        .head(top_n)["Region"]
+        .tolist()
+    )
+
+    top_control_regions = (
+        region_summary
+        .sort_values(
+            "mean_diff",
+            ascending=True,
+        )
+        .head(top_n)["Region"]
+        .tolist()
+    )
+
+    regions_to_plot = (
+        top_gifted_regions
+        + top_control_regions
+    )
+
+    selected = selected[
+        selected["Region"].isin(
+            regions_to_plot
+        )
+    ]
+
+    return (
+        selected,
+        regions_to_plot,
+    )
+
 
 def get_region_density_profile(
     dataframe,
     method,
     feature,
     region,
-    parcellation="500.aparc",
+    parcellation
 ):
     """
     Return Gifted-Control differences across densities
@@ -157,7 +231,7 @@ def compute_global_sed(
 def compute_global_sed_by_density(
     dataframe,
     method,
-    parcellation="500.aparc",
+    parcellation
 ):
     """
     Compute Global SED for every nodal feature and density
@@ -226,3 +300,72 @@ def compute_global_sed_by_density(
     )
 
     return result_df
+
+def compute_global_sed_all_methods(
+    dataframe,
+    methods,
+    parcellation,
+):
+    """
+    Compute the Global SED across densities
+    for all available network construction methods.
+    """
+
+    results = []
+
+    for method in methods:
+
+        selected = dataframe[
+            (dataframe["Method"] == method)
+            & (dataframe["Parcellation"] == parcellation)
+        ]
+
+        if selected.empty:
+            continue
+
+        method_df = compute_global_sed_by_density(
+            dataframe=dataframe,
+            method=method,
+            parcellation=parcellation,
+        )
+
+        results.append(method_df)
+
+    if not results:
+        return pd.DataFrame()
+
+    return pd.concat(
+        results,
+        ignore_index=True,
+    )
+
+
+def get_high_nodes_values(
+    dataframe,
+    method,
+    parcellation,
+    density,
+    group,
+):
+    """
+    Select high-versatility nodes for one method,
+    parcellation, density, and group.
+    """
+
+    mask = (
+        (dataframe["Method"] == method)
+        & (dataframe["Parcellation"] == parcellation)
+        & (dataframe["Group"] == group)
+        & np.isclose(
+            dataframe["Density"],
+            density,
+        )
+    )
+
+    selected = (
+        dataframe.loc[mask]
+        .copy()
+        .sort_values("Region")
+    )
+
+    return selected

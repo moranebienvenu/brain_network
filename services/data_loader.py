@@ -3,6 +3,7 @@ import pandas as pd
 from config import (
     DATA_DIR,
     METHODS,
+    PARCELLATIONS,
     IQ_CONTROL,
     IQ_GIFTED,
 )
@@ -81,15 +82,18 @@ def load_global_data():
     dataframes = []
 
     for method in METHODS:
+        for parcellation in PARCELLATIONS:
 
-        file_path = (
-            DATA_DIR
-            / f"global_individual_values_{method}_500.aparc.csv"
-        )
+            file_path = (
+                DATA_DIR
+                / f"global_individual_values_{method}_{parcellation}.csv"
+            )
 
-        df = pd.read_csv(file_path)
+            if file_path.exists():
 
-        dataframes.append(df)
+                df = pd.read_csv(file_path)
+
+                dataframes.append(df)
 
     global_df = pd.concat(
         dataframes,
@@ -127,18 +131,21 @@ def load_nodal_data():
     dataframes = []
 
     for method in METHODS:
+        for parcellation in PARCELLATIONS:
 
-        file_path = (
-            DATA_DIR
-            / (
-                "nodal_feature_values_all_densities_"
-                f"{method}_500.aparc.csv"
+            file_path = (
+                DATA_DIR
+                / (
+                    "nodal_feature_values_all_densities_"
+                    f"{method}_{parcellation}.csv"
+                )
             )
-        )
 
-        df = pd.read_csv(file_path)
+            if file_path.exists():
 
-        dataframes.append(df)
+                df = pd.read_csv(file_path)
+
+                dataframes.append(df)
 
     nodal_df = pd.concat(
         dataframes,
@@ -160,3 +167,58 @@ def load_nodal_data():
         )
 
     return nodal_df
+
+
+# ============================================================
+# High-versatility nodes data
+# ============================================================
+
+def load_high_nodes_data():
+    """
+    Load and concatenate high-versatility node CSV files.
+
+    Returns
+    -------
+    pandas.DataFrame
+    """
+
+    dataframes = []
+
+    for method in METHODS:
+        for parcellation in PARCELLATIONS:
+
+            file_path = (
+                DATA_DIR
+                / (
+                    "high_nodes_Node_Versatility_"
+                    f"{method}_{parcellation}.csv"
+                )
+            )
+
+            if file_path.exists():
+
+                df = pd.read_csv(file_path)
+
+                dataframes.append(df)
+
+    high_nodes_df = pd.concat(
+        dataframes,
+        ignore_index=True,
+    )
+
+    numeric_columns = [
+        "Density",
+        "Metric_Value",
+        "Mean_Metric",
+        "SD_Metric",
+        "High_Threshold",
+    ]
+
+    for column in numeric_columns:
+
+        high_nodes_df[column] = pd.to_numeric(
+            high_nodes_df[column],
+            errors="coerce",
+        )
+
+    return high_nodes_df

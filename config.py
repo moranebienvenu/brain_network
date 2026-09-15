@@ -15,7 +15,7 @@ DATA_DIR = BASE_DIR / "data"
 
 METHODS = ["maxSW", "MIND", "MSN"]
 
-PARCELLATIONS = ["500.aparc"]
+PARCELLATIONS = ["500.aparc", "aparc"]
 
 
 # ============================================================

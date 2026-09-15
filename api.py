@@ -4,10 +4,19 @@
 # ============================================================
 
 from flask import request, jsonify
+import json
+
+from config import (
+    METHODS,
+    PARCELLATIONS,
+    GLOBAL_METRICS,
+    NODAL_METRICS
+)
 
 from services.data_loader import (
     load_global_data,
     load_nodal_data,
+    load_high_nodes_data,
 )
 
 from services.global_metrics import (
@@ -22,6 +31,9 @@ from services.nodal_metrics import (
     get_top_regions,
     get_region_density_profile,
     compute_global_sed_by_density,
+    compute_global_sed_all_methods,
+    get_top_regions_across_densities,
+    get_high_nodes_values,
 )
 
 from figures.global_figures import (
@@ -34,10 +46,13 @@ from figures.global_figures import (
 from figures.nodal_figures import (
     make_top_regions_figure,
     make_region_density_figure,
+    make_method_comparison_figure,
+    make_regional_heatmap_figure,
 )
 
 from figures.brain_3d import (
     make_brain_3d_figure,
+    make_high_nodes_brain_figure,
 )
 
 
@@ -47,6 +62,7 @@ from figures.brain_3d import (
 
 GLOBAL_DATA = load_global_data()
 NODAL_DATA = load_nodal_data()
+HIGH_NODES_DATA=load_high_nodes_data()
 
 
 # ============================================================
@@ -57,7 +73,9 @@ def figure_to_json(figure):
     """
     Convert a Plotly figure into a JSON-compatible dictionary.
     """
-    return figure.to_dict()
+    return json.loads(
+        figure.to_json()
+    )
 
 
 def dataframe_to_json(dataframe):
@@ -123,23 +141,30 @@ def register_api(server):
             .tolist()
         )
 
+        high_node_densities = sorted(
+            HIGH_NODES_DATA["Density"]
+            .dropna()
+            .unique()
+            .tolist()
+        )
+
         return jsonify({
 
-            "methods": [
-                "MSN"
-            ],
+            "methods":  METHODS,
 
-            "global_metrics": [
-                "Global Efficiency"
-            ],
+            "parcellations": PARCELLATIONS,
+                
+            "global_metrics": GLOBAL_METRICS,
 
-            "nodal_metrics": [
-                "Clustering Coefficient"
-            ],
+            "nodal_metrics": NODAL_METRICS,
 
             "global_densities": global_densities,
 
             "nodal_densities": nodal_densities,
+
+            "high_node_densities": high_node_densities,
+
+        
 
         })
 
@@ -161,10 +186,16 @@ def register_api(server):
                 "MSN"
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             spearman_df = compute_spearman_by_density(
                 dataframe=GLOBAL_DATA,
                 method=method,
-                metrics=None,
+                metrics=GLOBAL_METRICS,
+                parcellation=parcellation
             )
 
             figure = make_spearman_figure(
@@ -174,7 +205,8 @@ def register_api(server):
                     "topological features"
                     "<br>"
                     f"at various connection "
-                    f"densities for {method}"
+                    f"densities for {method} - "
+                    f"{parcellation} parcellation"
                 ),
             )
 
@@ -182,7 +214,8 @@ def register_api(server):
                 "figure": figure_to_json(figure),
 
                 "parameters": {
-                    "method": method
+                    "method": method,
+                    "parcellation": parcellation,
                 }
             })
 
@@ -221,6 +254,11 @@ def register_api(server):
                 type=float
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             # ----------------------------------------------
             # Retrieve data
             # ----------------------------------------------
@@ -230,6 +268,7 @@ def register_api(server):
                 method=method,
                 metric=metric,
                 density=density,
+                parcellation=parcellation
             )
 
             if iq_df.empty:
@@ -257,6 +296,7 @@ def register_api(server):
                 dataframe=iq_df,
                 metric=metric,
                 density=density,
+                parcellation=parcellation,
                 statistics=statistics,
             )
 
@@ -270,6 +310,7 @@ def register_api(server):
                     "method": method,
                     "metric": metric,
                     "density": density,
+                    "parcellation": parcellation,
                 },
 
                 "statistics": statistics,
@@ -311,11 +352,17 @@ def register_api(server):
                 type=float
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             iq_df = get_iq_metric_data(
                 dataframe=GLOBAL_DATA,
                 method=method,
                 metric=metric,
                 density=density,
+                parcellation=parcellation,
             )
 
             if iq_df.empty:
@@ -334,6 +381,7 @@ def register_api(server):
                     "method": method,
                     "metric": metric,
                     "density": density,
+                    "parcellation": parcellation,
                 }
 
             })
@@ -367,15 +415,23 @@ def register_api(server):
                 "Global Efficiency"
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             profile_df = get_group_metric_profile(
                 dataframe=GLOBAL_DATA,
                 method=method,
                 metric=metric,
+                parcellation=parcellation,
             )
 
+        
             figure = make_group_density_figure(
                 summary_df=profile_df,
                 metric=metric,
+                parcellation=parcellation,
             )
 
             return jsonify({
@@ -387,6 +443,7 @@ def register_api(server):
                 "parameters": {
                     "method": method,
                     "metric": metric,
+                    "parcellation": parcellation,
                 }
 
             })
@@ -415,14 +472,21 @@ def register_api(server):
                 "MSN"
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             sed_df = compute_global_sed_by_density(
                 dataframe=NODAL_DATA,
                 method=method,
+                parcellation=parcellation
             )
 
             figure = make_global_sed_figure(
                 dataframe=sed_df,
                 method=method,
+                parcellation=parcellation
             )
 
             return jsonify({
@@ -433,6 +497,7 @@ def register_api(server):
 
                 "parameters": {
                     "method": method,
+                    "parcellation": parcellation,
                 }
 
             })
@@ -472,6 +537,11 @@ def register_api(server):
                 type=float
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             n_regions = request.args.get(
                 "n_regions",
                 15,
@@ -483,6 +553,7 @@ def register_api(server):
                 method=method,
                 feature=feature,
                 density=density,
+                parcellation=parcellation,
                 n_regions=n_regions,
             )
 
@@ -490,6 +561,7 @@ def register_api(server):
                 dataframe=top_df,
                 feature=feature,
                 density=density,
+                parcellation=parcellation,
             )
 
             return jsonify({
@@ -506,6 +578,7 @@ def register_api(server):
                     "method": method,
                     "feature": feature,
                     "density": density,
+                    "parcellation": parcellation,
                     "n_regions": n_regions,
                 }
 
@@ -540,6 +613,11 @@ def register_api(server):
                 "Clustering Coefficient"
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
             region = request.args.get(
                 "region"
             )
@@ -555,6 +633,7 @@ def register_api(server):
                 method=method,
                 feature=feature,
                 region=region,
+                parcellation=parcellation,
             )
 
             if region_df.empty:
@@ -567,6 +646,7 @@ def register_api(server):
                 dataframe=region_df,
                 region=region,
                 feature=feature,
+                parcellation=parcellation,
             )
 
             return jsonify({
@@ -583,6 +663,7 @@ def register_api(server):
                     "method": method,
                     "feature": feature,
                     "region": region,
+                    "parcellation": parcellation,
                 }
 
             })
@@ -622,11 +703,19 @@ def register_api(server):
                 type=float
             )
 
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
+
+
             selected = get_nodal_values(
                 dataframe=NODAL_DATA,
                 method=method,
                 feature=feature,
                 density=density,
+                parcellation=parcellation,
             )
 
             if selected.empty:
@@ -640,8 +729,9 @@ def register_api(server):
 
             figure = make_brain_3d_figure(
                 dataframe=selected,
+                parcellation=parcellation,
                 title=(
-                    f"{feature} — {method}"
+                    f"{feature} — {method} - {parcellation} "
                     "<br>"
                     "Gifted − Controls | "
                     f"Density = {density:.2f}"
@@ -662,6 +752,243 @@ def register_api(server):
                     "method": method,
                     "feature": feature,
                     "density": density,
+                    "parcellation":parcellation,
+                }
+
+            })
+
+        except Exception as e:
+
+            return jsonify({
+                "error": str(e)
+            }), 500
+        
+    
+    # ========================================================
+    # 13. NODAL — REGIONAL HEATMAP
+    # ========================================================
+
+    @server.route(
+        "/api/nodal/heatmap",
+        methods=["GET"]
+    )
+    def api_nodal_heatmap():
+
+        try:
+
+            method = request.args.get(
+                "method",
+                "MSN"
+            )
+
+            feature = request.args.get(
+                "feature",
+                "Clustering Coefficient"
+            )
+
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
+            show_values = request.args.get(
+                "show_values",
+                "true"
+            ).lower() == "true"
+
+            heatmap_df, regions_to_plot = (
+                get_top_regions_across_densities(
+                    dataframe=NODAL_DATA,
+                    method=method,
+                    feature=feature,
+                    parcellation=parcellation,
+                    top_n=15,
+                )
+            )
+
+            if heatmap_df.empty:
+
+                return jsonify({
+                    "error": "No heatmap data found."
+                }), 404
+
+            figure = make_regional_heatmap_figure(
+                dataframe=heatmap_df,
+                regions_to_plot=regions_to_plot,
+                feature=feature,
+                method=method,
+                parcellation=parcellation,
+                show_values=show_values,
+            )
+
+            return jsonify({
+
+                "figure": figure_to_json(
+                    figure
+                ),
+
+                "data": dataframe_to_json(
+                    heatmap_df
+                ),
+
+                "regions": regions_to_plot,
+
+                "parameters": {
+                    "method": method,
+                    "feature": feature,
+                    "parcellation": parcellation,
+                    "show_values": show_values,
+                }
+
+            })
+
+        except Exception as e:
+
+            return jsonify({
+                "error": str(e)
+            }), 500
+
+    # ========================================================
+    # 14. NODAL — METHOD COMPARISON
+    # ========================================================
+
+    @server.route(
+        "/api/nodal/method-comparison",
+        methods=["GET"]
+    )
+    def api_nodal_method_comparison():
+
+        try:
+
+            feature = request.args.get(
+                "feature",
+                "Clustering Coefficient"
+            )
+
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
+            comparison_df = compute_global_sed_all_methods(
+                dataframe=NODAL_DATA,
+                methods=METHODS,
+                parcellation=parcellation,
+            )
+
+            if comparison_df.empty:
+
+                return jsonify({
+                    "error": "No method comparison data found."
+                }), 404
+
+            figure = make_method_comparison_figure(
+                dataframe=comparison_df,
+                feature=feature,
+                parcellation=parcellation,
+            )
+
+            return jsonify({
+
+                "figure": figure_to_json(
+                    figure
+                ),
+
+                "data": dataframe_to_json(
+                    comparison_df
+                ),
+
+                "parameters": {
+                    "feature": feature,
+                    "parcellation": parcellation,
+                }
+
+            })
+
+        except Exception as e:
+
+            return jsonify({
+                "error": str(e)
+            }), 500
+        
+    # ========================================================
+    # 15. NODAL — HIGH-VERSATILITY NODES
+    # ========================================================
+
+    @server.route(
+        "/api/nodal/high-nodes",
+        methods=["GET"]
+    )
+    def api_nodal_high_nodes():
+
+        try:
+
+            method = request.args.get(
+                "method",
+                "MSN"
+            )
+
+            parcellation = request.args.get(
+                "parcellation",
+                "500.aparc"
+            )
+
+            density = request.args.get(
+                "density",
+                0.15,
+                type=float
+            )
+
+            group = request.args.get(
+                "group",
+                "Gifted"
+            )
+
+            high_nodes_df = get_high_nodes_values(
+                dataframe=HIGH_NODES_DATA,
+                method=method,
+                parcellation=parcellation,
+                density=density,
+                group=group,
+            )
+
+            if high_nodes_df.empty:
+
+                return jsonify({
+                    "error": (
+                        "No high-versatility nodes found "
+                        "for the requested parameters."
+                    )
+                }), 404
+
+            figure = make_high_nodes_brain_figure(
+                dataframe=high_nodes_df,
+                parcellation=parcellation,
+                group=group,
+
+                title=(
+                    f"{group} — High-versatility nodes"
+                    "<br>"
+                    f"{method} — {parcellation} — "
+                    f"Density = {density:.2f}"
+                ),
+            )
+
+            return jsonify({
+
+                "figure": figure_to_json(
+                    figure
+                ),
+
+                "data": dataframe_to_json(
+                    high_nodes_df
+                ),
+
+                "parameters": {
+                    "method": method,
+                    "parcellation": parcellation,
+                    "density": density,
+                    "group": group,
                 }
 
             })

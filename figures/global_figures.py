@@ -58,6 +58,7 @@ def make_spearman_figure(
 def make_iq_scatter_figure(
     dataframe,
     metric,
+    parcellation,
     density,
     statistics=None,
 ):
@@ -238,7 +239,8 @@ def make_iq_scatter_figure(
         title=(
             f"IQ vs {metric}"
             "<br>"
-            f"Density = {density:.2f}"
+            f"Density = {density:.2f} - "
+            f"{parcellation} parcellation"
         ),
 
         xaxis_title="IQ",
@@ -257,6 +259,7 @@ def make_iq_scatter_figure(
 def make_group_density_figure(
     summary_df,
     metric,
+    parcellation,
 ):
     """
     Mean global metric across densities for each group.
@@ -272,7 +275,7 @@ def make_group_density_figure(
     )
 
     fig.update_layout(
-        title=f"{metric} across densities",
+        title=f"{metric} across densities - {parcellation} parcellation",
         xaxis_title="Density",
         yaxis_title=metric,
         template="plotly_white",
@@ -284,6 +287,7 @@ def make_group_density_figure(
 def make_global_sed_figure(
     dataframe,
     method,
+    parcellation,
 ):
     """
     Plot Global SED of all nodal features
@@ -315,7 +319,7 @@ def make_global_sed_figure(
         title=(
             "Global SED of nodal features "
             "at various connection densities "
-            f"for {method}"
+            f"for {method} - {parcellation} parcellation"
         ),
 
         xaxis_title="Density",

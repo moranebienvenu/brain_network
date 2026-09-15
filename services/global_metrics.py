@@ -15,7 +15,7 @@ def get_global_values(
     metric=None,
     density=None,
     group=None,
-    parcellation="500.aparc",
+    parcellation=None,
 ):
     """
     Filter global individual metric values.
@@ -63,7 +63,7 @@ def compute_spearman_by_density(
     dataframe,
     method,
     metrics,
-    parcellation="500.aparc",
+    parcellation,
 ):
     """
     Compute Spearman correlations between IQ and network metrics
@@ -144,7 +144,7 @@ def get_iq_metric_data(
     method,
     metric,
     density,
-    parcellation="500.aparc",
+    parcellation
 ):
     """
     Return subject-level IQ and metric values at one density.
@@ -299,7 +299,7 @@ def get_group_metric_profile(
     dataframe,
     method,
     metric,
-    parcellation="500.aparc",
+    parcellation
 ):
     """
     Compute mean metric value at each density for each group.

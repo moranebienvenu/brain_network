@@ -11,6 +11,7 @@ from dash import (
 
 from config import (
     METHODS,
+    PARCELLATIONS,
     GLOBAL_METRICS,
     NODAL_METRICS,
 )
@@ -18,6 +19,7 @@ from config import (
 from services.data_loader import (
     load_global_data,
     load_nodal_data,
+    load_high_nodes_data,
 )
 
 from services.global_metrics import (
@@ -30,30 +32,30 @@ from services.global_metrics import (
 from services.nodal_metrics import (
     get_nodal_values,
     get_top_regions,
-    get_region_density_profile,
     compute_global_sed_by_density,
-)
-
-from services.mne_images import (
-    get_mne_image_path,
-    MNE_STATIC_METRICS,
+    compute_global_sed_all_methods,
+    get_top_regions_across_densities,
+    get_high_nodes_values,
 )
 
 from figures.global_figures import (
     make_spearman_figure,
     make_iq_scatter_figure,
     make_group_density_figure,
-    make_global_sed_figure,
+    
 )
 
 from figures.nodal_figures import (
     make_top_regions_figure,
-    make_region_density_figure,
+    make_method_comparison_figure,
+    make_regional_heatmap_figure,
 )
 
 from figures.brain_3d import (
     make_brain_3d_figure,
+    make_high_nodes_brain_figure,
     normalize_key,
+    
 )
 
 
@@ -63,6 +65,7 @@ from figures.brain_3d import (
 
 GLOBAL_DATA = load_global_data()
 NODAL_DATA = load_nodal_data()
+HIGH_NODES_DATA=load_high_nodes_data()
 
 
 # ============================================================
@@ -94,6 +97,12 @@ app = Dash(
 app.title = "Gifted Brain Network Explorer"
 
 server = app.server
+
+from api import register_api
+
+register_api(server)
+
+
 
 
 # ============================================================
@@ -164,10 +173,7 @@ app.layout = html.Div(
                                                     "label": "Spearman",
                                                     "value": "spearman",
                                                 },
-                                                {
-                                                    "label": "Global SED",
-                                                    "value": "sed",
-                                                },
+                                                
                                             ],
 
                                             value="spearman",
@@ -197,6 +203,30 @@ app.layout = html.Div(
                                         ),
                                     ]
                                 ),
+
+                                # Parcellation
+
+                                html.Div(
+                                    [
+                                        html.Label("Parcellation"),
+
+                                        dcc.Dropdown(
+                                            id="global-parcellation",
+
+                                            options=[
+                                                {
+                                                    "label": parcellation,
+                                                    "value": parcellation,
+                                                }
+                                                for parcellation in PARCELLATIONS
+                                            ],
+
+                                            value="500.aparc",
+                                            clearable=False,
+                                        ),
+                                    ]
+                                ),
+                                
 
                                 # Metric
                                 html.Div(
@@ -310,127 +340,6 @@ app.layout = html.Div(
 
                     children=[
 
-                        # ==================================================
-                        # STATIC MNE CORTICAL MAP
-                        # ==================================================
-
-                        html.Div(
-
-                            className="graph-card",
-
-                            children=[
-
-                                html.H3(
-                                    "Cortical map — MNE",
-                                ),
-
-                                html.P(
-                                    (
-                                        "Static cortical visualization "
-                                        "generated from the original "
-                                        "MNE analysis."
-                                    ),
-                                    className="figure-description",
-                                ),
-
-                                # ------------------------------
-                                # Static MNE controls
-                                # ------------------------------
-
-                                html.Div(
-
-                                    className="controls",
-
-                                    children=[
-
-                                        html.Div(
-                                            [
-                                                html.Label("Method"),
-
-                                                dcc.Dropdown(
-                                                    id="mne-method",
-
-                                                    options=[
-                                                        {
-                                                            "label": method,
-                                                            "value": method,
-                                                        }
-                                                        for method in METHODS
-                                                    ],
-
-                                                    value="MSN",
-                                                    clearable=False,
-                                                ),
-                                            ]
-                                        ),
-
-                                        html.Div(
-                                            [
-                                                html.Label("Metric"),
-
-                                                dcc.Dropdown(
-                                                    id="mne-feature",
-
-                                                    options=[
-                                                        {
-                                                            "label": metric,
-                                                            "value": metric,
-                                                        }
-                                                        for metric
-                                                        in MNE_STATIC_METRICS
-                                                    ],
-
-                                                    value=(
-                                                        "Clustering "
-                                                        "Coefficient"
-                                                    ),
-
-                                                    clearable=False,
-                                                ),
-                                            ]
-                                        ),
-
-                                        html.Div(
-                                            [
-                                                html.Label("Density"),
-
-                                                html.Div(
-                                                    "0.15",
-                                                    className="fixed-value",
-                                                ),
-                                            ]
-                                        ),
-
-                                        html.Div(
-                                            [
-                                                html.Label("Parcellation"),
-
-                                                html.Div(
-                                                    "500.aparc",
-                                                    className="fixed-value",
-                                                ),
-                                            ]
-                                        ),
-                                    ],
-                                ),
-
-                                # ------------------------------
-                                # Static MNE PNG
-                                # ------------------------------
-
-                                html.Img(
-                                    id="mne-brain-image",
-
-                                    style={
-                                        "width": "100%",
-                                        "maxWidth": "1200px",
-                                        "height": "auto",
-                                        "display": "block",
-                                        "margin": "0 auto",
-                                    },
-                                ),
-                            ],
-                        ),
 
                         # ==================================================
                         # INTERACTIVE NODAL CONTROLS
@@ -458,6 +367,29 @@ app.layout = html.Div(
                                             ],
 
                                             value="MSN",
+                                            clearable=False,
+                                        ),
+                                    ]
+                                ),
+
+                                # Parcellation
+
+                                html.Div(
+                                    [
+                                        html.Label("Parcellation"),
+
+                                        dcc.Dropdown(
+                                            id="nodal-parcellation",
+
+                                            options=[
+                                                {
+                                                    "label": parcellation,
+                                                    "value": parcellation,
+                                                }
+                                                for parcellation in PARCELLATIONS
+                                            ],
+
+                                            value="500.aparc",
                                             clearable=False,
                                         ),
                                     ]
@@ -504,17 +436,6 @@ app.layout = html.Div(
                                         ),
                                     ]
                                 ),
-
-                                html.Div(
-                                    [
-                                        html.Label("Region"),
-
-                                        dcc.Dropdown(
-                                            id="region-dropdown",
-                                            clearable=False,
-                                        ),
-                                    ]
-                                ),
                             ],
                         ),
 
@@ -534,60 +455,399 @@ app.layout = html.Div(
 
                                 html.P(
                                     (
-                                        "Hover over the cortical surface "
-                                        "to inspect regional values. "
-                                        "Click a region to select it."
+                                        "Explore regional Gifted-Control differences "
+                                        "or compare high-versatility nodes between groups."
                                     ),
                                     className="figure-description",
                                 ),
 
-                                dcc.Graph(
-                                    id="brain-3d-graph",
+                                # ------------------------------------------
+                                # 3D visualization mode
+                                # ------------------------------------------
 
-                                    config={
-                                        "displaylogo": False,
-                                        "scrollZoom": True,
-                                    },
+                                html.Div(
+
+                                    className="controls",
+
+                                    children=[
+
+                                        html.Div(
+                                            [
+                                                html.Label(
+                                                    "3D visualization"
+                                                ),
+
+                                                dcc.Dropdown(
+                                                    id="brain-visualization-mode",
+
+                                                    options=[
+                                                        {
+                                                            "label": "Gifted − Controls differences",
+                                                            "value": "difference",
+                                                        },
+                                                        {
+                                                            "label": "High-versatility nodes",
+                                                            "value": "high-nodes",
+                                                        },
+                                                    ],
+
+                                                    value="difference",
+                                                    clearable=False,
+                                                ),
+                                            ]
+                                        ),
+
+                                        html.Div(
+                                            [
+
+                                                html.Div(
+                                                    [
+                                                        dcc.Checklist(
+                                                            id="compare-parcellations",
+
+                                                            options=[
+                                                                {
+                                                                    "label": "",
+                                                                    "value": "compare",
+                                                                },
+                                                            ],
+
+                                                            value=[],
+
+                                                            inputStyle={
+                                                                "marginRight": "0px",
+                                                            },
+
+                                                            style={
+                                                                "margin": "0px",
+                                                            },
+                                                        ),
+
+                                                        html.Span(
+                                                            "Compare both parcellations",
+
+                                                            style={
+                                                                "marginLeft": "10px",
+                                                                "fontSize": "18px",
+                                                                "fontWeight": "500",
+                                                            },
+                                                        ),
+                                                    ],
+
+                                                    style={
+                                                        "padding": "10px 14px",
+                                                        "border": "1px solid #c7c7c7",
+                                                        "borderRadius": "8px",
+                                                        "backgroundColor": "white",
+                                                        "display": "flex",
+                                                        "alignItems": "center",
+                                                        "marginTop": "20px",
+                                                    },
+                                                ),
+                                            ]
+                                        ),
+                                    ],
+                                ),
+
+                                # ------------------------------------------
+                                # Gifted - Controls brain
+                                # ------------------------------------------
+
+                                html.Div(
+
+                                    id="difference-brain-container",
+
+                                    children=[
+
+                                        dcc.Graph(
+                                            id="brain-3d-graph",
+
+                                            config={
+                                                "displaylogo": False,
+                                                "scrollZoom": True,
+                                            },
+
+                                            style={
+                                                "height": "750px",
+                                            },
+                                        ),
+                                    ],
+                                ),
+
+                                html.Div(
+
+                                    id="parcellation-comparison-container",
+
+                                    className="two-columns",
 
                                     style={
-                                        "height": "750px",
+                                        "display": "none",
                                     },
+
+                                    children=[
+
+                                        html.Div(
+                                            children=[
+
+                                                dcc.Graph(
+                                                    id="aparc-brain-3d",
+
+                                                    config={
+                                                        "displaylogo": False,
+                                                        "scrollZoom": True,
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+
+                                        html.Div(
+                                            children=[
+
+                                                dcc.Graph(
+                                                    id="500-aparc-brain-3d",
+
+                                                    config={
+                                                        "displaylogo": False,
+                                                        "scrollZoom": True,
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+                                    ],
+                                ),
+
+                                # ------------------------------------------
+                                # High-versatility brains
+                                # ------------------------------------------
+
+                                html.Div(
+
+                                    id="high-nodes-brain-container",
+
+                                    className="two-columns",
+
+                                    style={
+                                        "display": "none",
+                                    },
+
+                                    children=[
+
+                                        html.Div(
+
+                                            children=[
+
+                                                dcc.Graph(
+                                                    id="control-high-nodes-brain",
+
+                                                    config={
+                                                        "displaylogo": False,
+                                                        "scrollZoom": True,
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+
+                                        html.Div(
+
+                                            children=[
+
+                                                dcc.Graph(
+                                                    id="gifted-high-nodes-brain",
+
+                                                    config={
+                                                        "displaylogo": False,
+                                                        "scrollZoom": True,
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+                                    ],
+                                ),
+                                
+                                # ------------------------------------------
+                                # High-versatility nodes
+                                # Parcellation comparison
+                                # ------------------------------------------
+
+                                html.Div(
+
+                                    id="high-nodes-parcellation-comparison-container",
+
+                                    style={
+                                        "display": "none",
+                                    },
+
+                                    children=[
+
+                                        html.Div(
+
+                                            className="two-columns",
+
+                                            children=[
+
+                                                html.Div(
+
+                                                    children=[
+
+                                                        dcc.Graph(
+                                                            id="control-aparc-high-nodes-brain",
+
+                                                            config={
+                                                                "displaylogo": False,
+                                                                "scrollZoom": True,
+                                                            },
+                                                        ),
+                                                    ],
+                                                ),
+
+                                                html.Div(
+
+                                                    children=[
+
+                                                        dcc.Graph(
+                                                            id="control-500-aparc-high-nodes-brain",
+
+                                                            config={
+                                                                "displaylogo": False,
+                                                                "scrollZoom": True,
+                                                            },
+                                                        ),
+                                                    ],
+                                                ),
+                                            ],
+                                        ),
+
+                                        html.Div(
+
+                                            className="two-columns",
+
+                                            children=[
+
+                                                html.Div(
+
+                                                    children=[
+
+                                                        dcc.Graph(
+                                                            id="gifted-aparc-high-nodes-brain",
+
+                                                            config={
+                                                                "displaylogo": False,
+                                                                "scrollZoom": True,
+                                                            },
+                                                        ),
+                                                    ],
+                                                ),
+
+                                                html.Div(
+
+                                                    children=[
+
+                                                        dcc.Graph(
+                                                            id="gifted-500-aparc-high-nodes-brain",
+
+                                                            config={
+                                                                "displaylogo": False,
+                                                                "scrollZoom": True,
+                                                            },
+                                                        ),
+                                                    ],
+                                                ),
+                                            ],
+                                        ),
+                                    ],
                                 ),
                             ],
                         ),
-
+                                    
+                
                         # ==================================================
                         # NODAL PLOTLY FIGURES
                         # ==================================================
 
                         html.Div(
 
-                            className="two-columns",
+                            className="graph-card",
+
+                            children=[
+
+                                dcc.Graph(
+                                    id="top-regions-graph",
+                                ),
+                            ],
+                        ),
+
+                        html.Div(
+
+                            className="graph-card",
 
                             children=[
 
                                 html.Div(
+                                    [
+                                        html.Label(
+                                            "Heatmap values"
+                                        ),
 
-                                    className="graph-card",
+                                        html.Div(
+                                            [
+                                                dcc.Checklist(
+                                                    id="heatmap-values",
 
-                                    children=[
+                                                    options=[
+                                                        {
+                                                            "label": "Show values",
+                                                            "value": "show",
+                                                        },
+                                                    ],
 
-                                        dcc.Graph(
-                                            id="top-regions-graph",
+                                                    value=["show"],
+
+                                                    inputStyle={
+                                                        "marginRight": "20px",
+                                                    },
+
+                                                    labelStyle={
+                                                        "cursor": "pointer",
+                                                    },
+                                                ),
+                                            ],
+
+                                            style={
+                                                "marginLeft": "25px",
+                                                "padding": "8px 12px",
+                                                "border": "1px solid #c7c7c7",
+                                                "borderRadius": "8px",
+                                                "backgroundColor": "white",
+                                                "display": "inline-block",
+                                            },
                                         ),
                                     ],
+
+                                    style={
+                                        "display": "flex",
+                                        "alignItems": "center",
+                                        "marginBottom": "15px",
+                                    },
                                 ),
 
-                                html.Div(
+                                dcc.Graph(
+                                    id="regional-heatmap-graph",
+                                ),
+                            ],
+                        ),
 
-                                    className="graph-card",
+                        html.Div(
 
-                                    children=[
+                            className="graph-card",
 
-                                        dcc.Graph(
-                                            id="region-density-graph",
-                                        ),
-                                    ],
+                            children=[
+
+                                html.H3(
+                                    "Comparison across network construction methods"
+                                ),
+
+                                dcc.Graph(
+                                    id="method-comparison-graph",
                                 ),
                             ],
                         ),
@@ -631,6 +891,11 @@ app.layout = html.Div(
     ),
 
     Input(
+        "global-parcellation",
+        "value",
+    ),
+
+    Input(
         "global-metric",
         "value",
     ),
@@ -643,6 +908,7 @@ app.layout = html.Div(
 def update_global_figures(
     analysis,
     method,
+    parcellation,
     metric,
     density,
 ):
@@ -657,6 +923,7 @@ def update_global_figures(
             dataframe=GLOBAL_DATA,
             method=method,
             metrics=GLOBAL_METRICS,
+            parcellation=parcellation,
         )
 
         main_fig = make_spearman_figure(
@@ -666,20 +933,8 @@ def update_global_figures(
             title=(
                 "Spearman rho of global topological features"
                 "<br>"
-                f"at various connection densities for {method}"
+                f"at various connection densities for {method} - {parcellation} parcellation"
             ),
-        )
-
-    elif analysis == "sed":
-
-        sed_df = compute_global_sed_by_density(
-            dataframe=NODAL_DATA,
-            method=method,
-        )
-
-        main_fig = make_global_sed_figure(
-            dataframe=sed_df,
-            method=method,
         )
 
     else:
@@ -696,6 +951,7 @@ def update_global_figures(
     method=method,
     metric=metric,
     density=density,
+    parcellation=parcellation,
     )
 
     iq_statistics = compute_iq_metric_statistics(
@@ -706,6 +962,7 @@ def update_global_figures(
         dataframe=iq_df,
         metric=metric,
         density=density,
+        parcellation=parcellation,
         statistics=iq_statistics,
     )
    
@@ -718,11 +975,13 @@ def update_global_figures(
         dataframe=GLOBAL_DATA,
         method=method,
         metric=metric,
+        parcellation=parcellation,
     )
 
     profile_fig = make_group_density_figure(
         summary_df=profile_df,
         metric=metric,
+        parcellation=parcellation,
     )
 
     return (
@@ -754,6 +1013,11 @@ def update_global_figures(
     ),
 
     Input(
+        "nodal-parcellation",
+        "value",
+    ),
+
+    Input(
         "nodal-feature",
         "value",
     ),
@@ -765,6 +1029,7 @@ def update_global_figures(
 )
 def update_region_dropdown(
     method,
+    parcellation,
     feature,
     density,
 ):
@@ -772,6 +1037,7 @@ def update_region_dropdown(
     selected = get_nodal_values(
         dataframe=NODAL_DATA,
         method=method,
+        parcellation=parcellation,
         feature=feature,
         density=density,
     )
@@ -803,47 +1069,165 @@ def update_region_dropdown(
 
 
 # ============================================================
-# 7. STATIC MNE IMAGE CALLBACK
-# ============================================================
-
-@callback(
-
-    Output(
-        "mne-brain-image",
-        "src",
-    ),
-
-    Input(
-        "mne-method",
-        "value",
-    ),
-
-    Input(
-        "mne-feature",
-        "value",
-    ),
-)
-def update_mne_image(
-    method,
-    feature,
-):
-
-    return get_mne_image_path(
-        method=method,
-        feature=feature,
-        density=0.15,
-        parcellation="500.aparc",
-    )
-
-
-# ============================================================
-# 8. INTERACTIVE 3D BRAIN CALLBACK
+# 7. INTERACTIVE 3D BRAIN CALLBACK
 # ============================================================
 
 @callback(
 
     Output(
         "brain-3d-graph",
+        "figure",
+    ),
+
+    Input(
+        "nodal-method",
+        "value",
+    ),
+
+    Input(
+        "nodal-parcellation",
+        "value",
+    ),
+
+    Input(
+        "nodal-feature",
+        "value",
+    ),
+
+    Input(
+        "nodal-density",
+        "value",
+    ),
+)
+def update_brain_3d(
+    method,
+    parcellation,
+    feature,
+    density,
+):
+
+    selected = get_nodal_values(
+        dataframe=NODAL_DATA,
+        method=method,
+        feature=feature,
+        density=density,
+        parcellation=parcellation,
+    )
+
+    return make_brain_3d_figure(
+
+        dataframe=selected,
+        parcellation=parcellation,
+
+        title=(
+            f"{feature} — {method} — {parcellation} "
+            "<br>"
+            f"|Gifted − Controls | Density = {density:.2f}"
+        ),
+    )
+
+# ============================================================
+# 7B. 3D VISUALIZATION MODE CALLBACK
+# ============================================================
+
+@callback(
+
+    Output(
+        "difference-brain-container",
+        "style",
+    ),
+
+    Output(
+        "parcellation-comparison-container",
+        "style",
+    ),
+
+    Output(
+        "high-nodes-brain-container",
+        "style",
+    ),
+
+    Output(
+        "high-nodes-parcellation-comparison-container",
+        "style",
+    ),
+
+    Input(
+        "brain-visualization-mode",
+        "value",
+    ),
+
+    Input(
+        "compare-parcellations",
+        "value",
+    ),
+)
+def update_brain_visualization_mode(
+    visualization_mode,
+    compare_parcellations,
+):
+
+    compare = (
+        "compare"
+        in compare_parcellations
+    )
+
+    # --------------------------------------------------------
+    # Gifted - Controls differences
+    # --------------------------------------------------------
+
+    if visualization_mode == "difference":
+
+        if compare:
+
+            return (
+                {"display": "none"},
+                {"display": "grid"},
+                {"display": "none"},
+                {"display": "none"},
+            )
+
+        return (
+            {"display": "block"},
+            {"display": "none"},
+            {"display": "none"},
+            {"display": "none"},
+        )
+
+    # --------------------------------------------------------
+    # High-versatility nodes
+    # --------------------------------------------------------
+
+    if compare:
+
+        return (
+            {"display": "none"},
+            {"display": "none"},
+            {"display": "none"},
+            {"display": "block"},
+        )
+
+    return (
+        {"display": "none"},
+        {"display": "none"},
+        {"display": "grid"},
+        {"display": "none"},
+    )
+
+
+# ============================================================
+# 7C. PARCELLATION COMPARISON CALLBACK
+# ============================================================
+
+@callback(
+
+    Output(
+        "aparc-brain-3d",
+        "figure",
+    ),
+
+    Output(
+        "500-aparc-brain-3d",
         "figure",
     ),
 
@@ -862,34 +1246,304 @@ def update_mne_image(
         "value",
     ),
 )
-def update_brain_3d(
+def update_parcellation_comparison(
     method,
     feature,
     density,
 ):
 
-    selected = get_nodal_values(
+    # --------------------------------------------------------
+    # aparc
+    # --------------------------------------------------------
+
+    aparc_data = get_nodal_values(
         dataframe=NODAL_DATA,
         method=method,
+        parcellation="aparc",
         feature=feature,
         density=density,
     )
 
-    return make_brain_3d_figure(
-
-        dataframe=selected,
+    aparc_fig = make_brain_3d_figure(
+        dataframe=aparc_data,
+        parcellation="aparc",
 
         title=(
             f"{feature} — {method}"
             "<br>"
-            f"Gifted − Controls | "
+            f"aparc | Gifted − Controls | "
             f"Density = {density:.2f}"
         ),
     )
 
+    # --------------------------------------------------------
+    # 500.aparc
+    # --------------------------------------------------------
+
+    aparc500_data = get_nodal_values(
+        dataframe=NODAL_DATA,
+        method=method,
+        parcellation="500.aparc",
+        feature=feature,
+        density=density,
+    )
+
+    aparc500_fig = make_brain_3d_figure(
+        dataframe=aparc500_data,
+        parcellation="500.aparc",
+
+        title=(
+            f"{feature} — {method}"
+            "<br>"
+            f"500.aparc | Gifted − Controls | "
+            f"Density = {density:.2f}"
+        ),
+    )
+
+    return (
+        aparc_fig,
+        aparc500_fig,
+    )
 
 # ============================================================
-# 9. CLICK ON BRAIN -> SELECT REGION
+# 7D. HIGH-VERSATILITY NODES BRAINS CALLBACK
+# ============================================================
+
+@callback(
+
+    Output(
+        "control-high-nodes-brain",
+        "figure",
+    ),
+
+    Output(
+        "gifted-high-nodes-brain",
+        "figure",
+    ),
+
+    Input(
+        "nodal-method",
+        "value",
+    ),
+
+    Input(
+        "nodal-parcellation",
+        "value",
+    ),
+
+    Input(
+        "nodal-density",
+        "value",
+    ),
+)
+def update_high_nodes_brains(
+    method,
+    parcellation,
+    density,
+):
+
+    # --------------------------------------------------------
+    # Control
+    # --------------------------------------------------------
+
+    control_data = get_high_nodes_values(
+        dataframe=HIGH_NODES_DATA,
+        method=method,
+        parcellation=parcellation,
+        density=density,
+        group="Control",
+    )
+
+    control_fig = make_high_nodes_brain_figure(
+        dataframe=control_data,
+        parcellation=parcellation,
+        group="Control",
+
+        title=(
+            "Control — High-versatility nodes"
+            "<br>"
+            f"{method} — {parcellation} — "
+            f"Density = {density:.2f}"
+        ),
+    )
+
+    # --------------------------------------------------------
+    # Gifted
+    # --------------------------------------------------------
+
+    gifted_data = get_high_nodes_values(
+        dataframe=HIGH_NODES_DATA,
+        method=method,
+        parcellation=parcellation,
+        density=density,
+        group="Gifted",
+    )
+
+    gifted_fig = make_high_nodes_brain_figure(
+        dataframe=gifted_data,
+        parcellation=parcellation,
+        group="Gifted",
+
+        title=(
+            "Gifted — High-versatility nodes"
+            "<br>"
+            f"{method} — {parcellation} — "
+            f"Density = {density:.2f}"
+        ),
+    )
+
+    return (
+        control_fig,
+        gifted_fig,
+    )
+
+# ============================================================
+# 7E. HIGH-VERSATILITY PARCELLATION COMPARISON CALLBACK
+# ============================================================
+
+@callback(
+
+    Output(
+        "control-aparc-high-nodes-brain",
+        "figure",
+    ),
+
+    Output(
+        "control-500-aparc-high-nodes-brain",
+        "figure",
+    ),
+
+    Output(
+        "gifted-aparc-high-nodes-brain",
+        "figure",
+    ),
+
+    Output(
+        "gifted-500-aparc-high-nodes-brain",
+        "figure",
+    ),
+
+    Input(
+        "nodal-method",
+        "value",
+    ),
+
+    Input(
+        "nodal-density",
+        "value",
+    ),
+)
+def update_high_nodes_parcellation_comparison(
+    method,
+    density,
+):
+
+    # --------------------------------------------------------
+    # Control - aparc
+    # --------------------------------------------------------
+
+    control_aparc_data = get_high_nodes_values(
+        dataframe=HIGH_NODES_DATA,
+        method=method,
+        parcellation="aparc",
+        density=density,
+        group="Control",
+    )
+
+    control_aparc_fig = make_high_nodes_brain_figure(
+        dataframe=control_aparc_data,
+        parcellation="aparc",
+        group="Control",
+
+        title=(
+            "Control — aparc"
+            "<br>"
+            f"{method} — Density = {density:.2f}"
+        ),
+    )
+
+    # --------------------------------------------------------
+    # Control - 500.aparc
+    # --------------------------------------------------------
+
+    control_500_data = get_high_nodes_values(
+        dataframe=HIGH_NODES_DATA,
+        method=method,
+        parcellation="500.aparc",
+        density=density,
+        group="Control",
+    )
+
+    control_500_fig = make_high_nodes_brain_figure(
+        dataframe=control_500_data,
+        parcellation="500.aparc",
+        group="Control",
+
+        title=(
+            "Control — 500.aparc"
+            "<br>"
+            f"{method} — Density = {density:.2f}"
+        ),
+    )
+
+    # --------------------------------------------------------
+    # Gifted - aparc
+    # --------------------------------------------------------
+
+    gifted_aparc_data = get_high_nodes_values(
+        dataframe=HIGH_NODES_DATA,
+        method=method,
+        parcellation="aparc",
+        density=density,
+        group="Gifted",
+    )
+
+    gifted_aparc_fig = make_high_nodes_brain_figure(
+        dataframe=gifted_aparc_data,
+        parcellation="aparc",
+        group="Gifted",
+
+        title=(
+            "Gifted — aparc"
+            "<br>"
+            f"{method} — Density = {density:.2f}"
+        ),
+    )
+
+    # --------------------------------------------------------
+    # Gifted - 500.aparc
+    # --------------------------------------------------------
+
+    gifted_500_data = get_high_nodes_values(
+        dataframe=HIGH_NODES_DATA,
+        method=method,
+        parcellation="500.aparc",
+        density=density,
+        group="Gifted",
+    )
+
+    gifted_500_fig = make_high_nodes_brain_figure(
+        dataframe=gifted_500_data,
+        parcellation="500.aparc",
+        group="Gifted",
+
+        title=(
+            "Gifted — 500.aparc"
+            "<br>"
+            f"{method} — Density = {density:.2f}"
+        ),
+    )
+
+    return (
+        control_aparc_fig,
+        control_500_fig,
+        gifted_aparc_fig,
+        gifted_500_fig,
+    )
+
+
+# ============================================================
+# 8. CLICK ON BRAIN -> SELECT REGION
 # ============================================================
 
 @callback(
@@ -911,6 +1565,11 @@ def update_brain_3d(
     ),
 
     State(
+        "nodal-parcellation",
+        "value",
+    ),
+
+    State(
         "nodal-feature",
         "value",
     ),
@@ -925,6 +1584,7 @@ def update_brain_3d(
 def select_region_from_brain(
     click_data,
     method,
+    parcellation,
     feature,
     density,
 ):
@@ -954,6 +1614,7 @@ def select_region_from_brain(
         method=method,
         feature=feature,
         density=density,
+        parcellation=parcellation,
     )
 
     target_key = normalize_key(
@@ -975,7 +1636,7 @@ def select_region_from_brain(
 
 
 # ============================================================
-# 10. NODAL PLOTLY CALLBACK
+# 9. NODAL PLOTLY CALLBACK
 # ============================================================
 
 @callback(
@@ -986,12 +1647,17 @@ def select_region_from_brain(
     ),
 
     Output(
-        "region-density-graph",
-        "figure",
+    "regional-heatmap-graph",
+    "figure",
     ),
 
     Input(
         "nodal-method",
+        "value",
+    ),
+
+    Input(
+        "nodal-parcellation",
         "value",
     ),
 
@@ -1006,15 +1672,18 @@ def select_region_from_brain(
     ),
 
     Input(
-        "region-dropdown",
+        "heatmap-values",
         "value",
     ),
+
 )
+
 def update_nodal_figures(
     method,
+    parcellation,
     feature,
-    density,
-    region,
+    density,  
+    heatmap_values,
 ):
 
     selected = get_nodal_values(
@@ -1022,6 +1691,7 @@ def update_nodal_figures(
         method=method,
         feature=feature,
         density=density,
+        parcellation=parcellation
     )
 
     if selected.empty:
@@ -1042,6 +1712,7 @@ def update_nodal_figures(
         method=method,
         feature=feature,
         density=density,
+        parcellation=parcellation,
         n_regions=15,
     )
 
@@ -1049,38 +1720,76 @@ def update_nodal_figures(
         dataframe=top_df,
         feature=feature,
         density=density,
+        parcellation=parcellation
     )
 
     # --------------------------------------------------------
-    # Selected region across densities
+    # Regional heatmap across densities
     # --------------------------------------------------------
 
-    if region is None:
-
-        region = (
-            selected["Region"]
-            .dropna()
-            .iloc[0]
+    heatmap_df, regions_to_plot = (
+        get_top_regions_across_densities(
+            dataframe=NODAL_DATA,
+            method=method,
+            feature=feature,
+            parcellation=parcellation,
+            top_n=15,
         )
-
-    region_df = get_region_density_profile(
-        dataframe=NODAL_DATA,
-        method=method,
-        feature=feature,
-        region=region,
     )
 
-    region_fig = make_region_density_figure(
-        dataframe=region_df,
-        region=region,
+    heatmap_fig = make_regional_heatmap_figure(
+        dataframe=heatmap_df,
+        regions_to_plot=regions_to_plot,
         feature=feature,
+        method=method,
+        parcellation=parcellation,
+        show_values=(
+            "show" in heatmap_values
+        ),
     )
 
     return (
         top_fig,
-        region_fig,
+        heatmap_fig,
     )
 
+
+# ============================================================
+# 10. GLOBAL SED FOR ALL METHODS CALLBACK
+# ============================================================
+@callback(
+
+    Output(
+        "method-comparison-graph",
+        "figure",
+    ),
+
+    Input(
+        "nodal-parcellation",
+        "value",
+    ),
+
+    Input(
+        "nodal-feature",
+        "value",
+    ),
+)
+def update_method_comparison(
+    parcellation,
+    feature,
+):
+
+    comparison_df = compute_global_sed_all_methods(
+        dataframe=NODAL_DATA,
+        methods=METHODS,
+        parcellation=parcellation,
+    )
+
+    return make_method_comparison_figure(
+        dataframe=comparison_df,
+        feature=feature,
+        parcellation=parcellation,
+    )
 
 # ============================================================
 # 11. RUN APPLICATION
