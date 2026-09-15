@@ -1,0 +1,249 @@
+Density,Region,Metric_Value,Group,Method,Parcellation,Feature,Mean_Metric,SD_Metric,High_Threshold,Is_High_Node,Mapping_Region,Von_Economo_Class,Von_Economo_Label,Broad_Category,Is_Association_Cortex
+0.05,lh_caudalmiddlefrontal,0.2957822848204002,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.05,lh_inferiorparietal,0.2723740555978487,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,lh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.05,lh_paracentral,0.2893637162165841,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.05,lh_precentral,0.3118587159237332,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.05,lh_precuneus,0.2705251573734244,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.05,lh_transversetemporal,0.4473615865520365,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.05,rh_caudalmiddlefrontal,0.2852385899994979,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,rh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.05,rh_paracentral,0.2893637162165841,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.05,rh_parstriangularis,0.4405259828338136,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,rh_parstriangularis,2,Association cortex - type 1,Association,True
+0.05,rh_precuneus,0.6052078657643252,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.05,rh_transversetemporal,0.4473615865520365,Control,maxSW,aparc,Node Versatility,0.09695423528325811,0.13935484218879887,0.23630907747205698,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.1,lh_caudalmiddlefrontal,0.5398417538966606,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.1,lh_paracentral,0.791413509295,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.1,lh_parsopercularis,0.584305213081076,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,lh_parsopercularis,2,Association cortex - type 1,Association,True
+0.1,lh_precentral,0.7691188586009844,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.1,lh_superiorparietal,0.6808230632830884,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,lh_superiorparietal,2,Association cortex - type 1,Association,True
+0.1,lh_transversetemporal,0.8103550535064172,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.1,rh_paracentral,0.7566033137488896,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.1,rh_precentral,0.8325820050566105,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,rh_precentral,1,Primary motor cortex,Primary,False
+0.1,rh_precuneus,0.7994109765050539,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.1,rh_superiorparietal,0.6808230632830884,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,rh_superiorparietal,2,Association cortex - type 1,Association,True
+0.1,rh_transversetemporal,0.8103550535064172,Control,maxSW,aparc,Node Versatility,0.2826223521961665,0.2444663547352458,0.5270887069314123,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.15,lh_caudalmiddlefrontal,0.605235231185604,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.15,lh_paracentral,1.0,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.15,lh_precentral,0.5024703074494374,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.15,lh_precuneus,0.5511493039342673,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.15,rh_fusiform,0.445748899841094,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.15,rh_paracentral,0.6778363232709836,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.15,rh_precentral,0.4716857853304132,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,rh_precentral,1,Primary motor cortex,Primary,False
+0.15,rh_rostralmiddlefrontal,0.4404517429786371,Control,maxSW,aparc,Node Versatility,0.252967309325281,0.17716356443129064,0.43013087375657166,True,rh_rostralmiddlefrontal,3,Association cortex - type 2,Association,True
+0.2,lh_caudalmiddlefrontal,0.3803086615478471,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.2,lh_medialorbitofrontal,0.3683404163980154,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.2,lh_paracentral,0.3788678891839125,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.2,lh_parahippocampal,0.4088619713785961,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.2,lh_precentral,0.5329707709492956,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.2,lh_precuneus,0.3806360560972176,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.2,lh_rostralmiddlefrontal,0.3737397085919891,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,lh_rostralmiddlefrontal,3,Association cortex - type 2,Association,True
+0.2,rh_medialorbitofrontal,0.4174795474426392,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,rh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.2,rh_parahippocampal,0.4365982313859917,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.2,rh_parstriangularis,0.3923084683405475,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,rh_parstriangularis,2,Association cortex - type 1,Association,True
+0.2,rh_precentral,0.594762368450351,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,rh_precentral,1,Primary motor cortex,Primary,False
+0.2,rh_rostralmiddlefrontal,0.4107765384853929,Control,maxSW,aparc,Node Versatility,0.19192620341251798,0.14036714868532796,0.33229335209784594,True,rh_rostralmiddlefrontal,3,Association cortex - type 2,Association,True
+0.3,lh_fusiform,0.618066879844404,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.3,lh_lateralorbitofrontal,0.9177041355301538,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,lh_rostralanteriorcingulate,0.8043967180621545,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.3,lh_transversetemporal,0.734347767753199,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.3,rh_fusiform,0.6813427077149538,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.3,rh_lateralorbitofrontal,1.0,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,rh_rostralanteriorcingulate,0.8234131004560785,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.3,rh_transversetemporal,0.734347767753199,Control,maxSW,aparc,Node Versatility,0.2743247370950733,0.22923500854132578,0.5035597456363992,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.4,lh_caudalanteriorcingulate,0.4230974895582659,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,lh_entorhinal,0.4776115348522707,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_entorhinal,6,Limbic cortex,Limbic,False
+0.4,lh_lateralorbitofrontal,0.4256930775003094,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.4,lh_parahippocampal,0.4495687184309351,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.4,lh_posteriorcingulate,0.6132034907596091,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,lh_precuneus,0.6127356124168302,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.4,lh_transversetemporal,0.5039155142884653,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.4,rh_caudalanteriorcingulate,0.4244284180389587,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_entorhinal,0.4776115348522707,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_entorhinal,6,Limbic cortex,Limbic,False
+0.4,rh_isthmuscingulate,0.6508794381513141,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_isthmuscingulate,6,Limbic cortex,Limbic,False
+0.4,rh_parahippocampal,0.626461631072144,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.4,rh_posteriorcingulate,0.5865769953493231,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_precuneus,0.5917787822890851,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.4,rh_rostralanteriorcingulate,0.6114655092247997,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_transversetemporal,0.5039155142884653,Control,maxSW,aparc,Node Versatility,0.219986498398575,0.19867612657468012,0.4186626249732551,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.5,lh_bankssts,0.3587539414831258,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,lh_bankssts,3,Association cortex - type 2,Association,True
+0.5,lh_insula,0.3358413800083481,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,lh_insula,7,Insular cortex,Insular,False
+0.5,lh_posteriorcingulate,0.5659994547384569,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.5,lh_precuneus,0.7080914470775648,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.5,lh_superiorfrontal,0.3082109976553217,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,lh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.5,lh_transversetemporal,0.2870319241440019,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.5,rh_bankssts,0.3358413800083481,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,rh_bankssts,3,Association cortex - type 2,Association,True
+0.5,rh_insula,0.3358413800083481,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,rh_insula,7,Insular cortex,Insular,False
+0.5,rh_precuneus,0.5992143142988944,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.5,rh_transversetemporal,0.2838750645578259,Control,maxSW,aparc,Node Versatility,0.10976654713257238,0.14727114088015655,0.2570376880127289,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.6,lh_caudalanteriorcingulate,0.6843652579133942,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.6,lh_entorhinal,0.6714198408909403,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_entorhinal,6,Limbic cortex,Limbic,False
+0.6,lh_inferiortemporal,0.8369369951471263,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.6,lh_parsorbitalis,0.5257205554892678,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.6,lh_posteriorcingulate,0.5401813283897516,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.6,lh_precuneus,0.7686208484932555,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.6,lh_superiorfrontal,0.7884242176153149,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,lh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.6,rh_entorhinal,0.6714198408909403,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,rh_entorhinal,6,Limbic cortex,Limbic,False
+0.6,rh_inferiortemporal,0.8654236052404412,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,rh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.6,rh_parsorbitalis,0.5056922398726169,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,rh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.6,rh_precuneus,0.934830188470298,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.6,rh_superiorfrontal,1.0,Control,maxSW,aparc,Node Versatility,0.2525301403749408,0.25131639784970544,0.5038465382246462,True,rh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.7,lh_cuneus,0.5068872909694369,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,lh_inferiortemporal,0.4411808805170958,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.7,lh_lateraloccipital,0.5111795282294587,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_lateraloccipital,4,Secondary sensory cortex,Secondary,False
+0.7,lh_parsorbitalis,0.4065905597186258,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.7,lh_pericalcarine,0.5201571778920074,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.7,lh_postcentral,0.7329471862445072,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_postcentral,5,Primary sensory cortex,Primary,False
+0.7,lh_superiorfrontal,0.3622368125293261,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,lh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.7,rh_cuneus,0.5068872909694369,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,rh_inferiortemporal,0.3658878444943542,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,rh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.7,rh_lateraloccipital,0.5537307948171718,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,rh_lateraloccipital,4,Secondary sensory cortex,Secondary,False
+0.7,rh_pericalcarine,0.5201571778920074,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.7,rh_postcentral,0.4641789729228964,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,rh_postcentral,5,Primary sensory cortex,Primary,False
+0.7,rh_superiorfrontal,0.7119865988212635,Control,maxSW,aparc,Node Versatility,0.1678905935272351,0.18784832009084976,0.35573891361808485,True,rh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.8,lh_frontalpole,0.896713302754846,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,lh_frontalpole,3,Association cortex - type 2,Association,True
+0.8,lh_parahippocampal,0.5273106832694553,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.8,lh_pericalcarine,0.6178668709156501,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.8,lh_rostralanteriorcingulate,0.4725869360243254,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.8,lh_temporalpole,0.8934328435246351,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,lh_temporalpole,2,Association cortex - type 1,Association,True
+0.8,rh_frontalpole,0.896713302754846,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,rh_frontalpole,3,Association cortex - type 2,Association,True
+0.8,rh_pericalcarine,0.6178668709156501,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.8,rh_temporalpole,0.8934328435246351,Control,maxSW,aparc,Node Versatility,0.24872294924110847,0.21998378064924443,0.4687067298903529,True,rh_temporalpole,2,Association cortex - type 1,Association,True
+0.9,lh_caudalanteriorcingulate,0.9591787358947316,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,lh_caudalmiddlefrontal,0.7297939326015714,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.9,lh_inferiorparietal,0.6375763033804891,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,lh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.9,lh_lingual,0.6916069607229738,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.9,lh_posteriorcingulate,1.0,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,rh_caudalanteriorcingulate,0.647800885416348,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,rh_fusiform,0.7184574052343796,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.9,rh_rostralanteriorcingulate,0.874079732599131,Control,maxSW,aparc,Node Versatility,0.37686301674430345,0.24111013335711098,0.6179731501014144,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+1.0,lh_lingual,1.0,Control,maxSW,aparc,Node Versatility,0.43918922816810996,0.22149865429619983,0.6606878824643098,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,lh_precuneus,0.8484330732335649,Control,maxSW,aparc,Node Versatility,0.43918922816810996,0.22149865429619983,0.6606878824643098,True,lh_precuneus,2,Association cortex - type 1,Association,True
+1.0,rh_lingual,1.0,Control,maxSW,aparc,Node Versatility,0.43918922816810996,0.22149865429619983,0.6606878824643098,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,rh_precentral,0.7906254024362425,Control,maxSW,aparc,Node Versatility,0.43918922816810996,0.22149865429619983,0.6606878824643098,True,rh_precentral,1,Primary motor cortex,Primary,False
+1.0,rh_precuneus,0.8484330732335649,Control,maxSW,aparc,Node Versatility,0.43918922816810996,0.22149865429619983,0.6606878824643098,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.05,lh_caudalmiddlefrontal,0.6851688148468309,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.05,lh_inferiorparietal,0.5410511484276801,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.05,lh_paracentral,0.4591810806100972,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.05,lh_parahippocampal,0.5805515908404945,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.05,lh_precentral,0.4726179983746182,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.05,lh_precuneus,1.0,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.05,lh_superiorparietal,0.4559342133977619,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,lh_superiorparietal,2,Association cortex - type 1,Association,True
+0.05,rh_caudalmiddlefrontal,0.9435219026278416,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,rh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.05,rh_paracentral,0.4591810806100972,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.05,rh_parahippocampal,0.5805515908404945,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.05,rh_precentral,0.4646142604779039,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,rh_precentral,1,Primary motor cortex,Primary,False
+0.05,rh_supramarginal,0.4034997063825781,Gifted,maxSW,aparc,Node Versatility,0.13703264131412785,0.2320652887326532,0.36909793004678104,True,rh_supramarginal,3,Association cortex - type 2,Association,True
+0.1,lh_caudalanteriorcingulate,0.97729543513523,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.1,lh_caudalmiddlefrontal,0.8679501058577902,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.1,lh_posteriorcingulate,0.97729543513523,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.1,lh_precuneus,1.0,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.1,lh_transversetemporal,0.92638769529155,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.1,rh_caudalanteriorcingulate,0.705682432415699,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.1,rh_caudalmiddlefrontal,0.8333550999644727,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,rh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.1,rh_lateralorbitofrontal,0.6946122171245986,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.1,rh_posteriorcingulate,0.705682432415699,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,rh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.1,rh_precuneus,0.9356356734619268,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.1,rh_transversetemporal,0.92638769529155,Gifted,maxSW,aparc,Node Versatility,0.34966098644794474,0.3002284340330058,0.6498894204809506,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.15,lh_lateralorbitofrontal,0.707371429884805,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.15,lh_paracentral,0.7019100980242141,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.15,lh_parahippocampal,0.6432015739588405,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.15,lh_precuneus,0.8094692630706342,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.15,lh_rostralmiddlefrontal,0.5333416176358922,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,lh_rostralmiddlefrontal,3,Association cortex - type 2,Association,True
+0.15,rh_inferiorparietal,0.6023774302541157,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,rh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.15,rh_medialorbitofrontal,0.96011896170265,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,rh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.15,rh_paracentral,0.7019100980242141,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.15,rh_parahippocampal,0.6432015739588405,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.15,rh_rostralmiddlefrontal,0.5333416176358922,Gifted,maxSW,aparc,Node Versatility,0.30914348266799446,0.22316057191666117,0.5323040545846556,True,rh_rostralmiddlefrontal,3,Association cortex - type 2,Association,True
+0.2,lh_lateralorbitofrontal,0.5246207562265037,Gifted,maxSW,aparc,Node Versatility,0.2696639245818368,0.21279537034972182,0.4824592949315586,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.2,lh_medialorbitofrontal,1.0,Gifted,maxSW,aparc,Node Versatility,0.2696639245818368,0.21279537034972182,0.4824592949315586,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.2,lh_paracentral,0.8093507254764926,Gifted,maxSW,aparc,Node Versatility,0.2696639245818368,0.21279537034972182,0.4824592949315586,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.2,lh_parahippocampal,0.6912174329488338,Gifted,maxSW,aparc,Node Versatility,0.2696639245818368,0.21279537034972182,0.4824592949315586,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.2,lh_parstriangularis,0.6487846600772269,Gifted,maxSW,aparc,Node Versatility,0.2696639245818368,0.21279537034972182,0.4824592949315586,True,lh_parstriangularis,2,Association cortex - type 1,Association,True
+0.2,rh_medialorbitofrontal,1.0,Gifted,maxSW,aparc,Node Versatility,0.2696639245818368,0.21279537034972182,0.4824592949315586,True,rh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,lh_fusiform,0.7020711347062215,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.3,lh_lateralorbitofrontal,0.6626241876010447,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,lh_paracentral,0.4888223142717414,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,lh_paracentral,1,Primary motor cortex,Primary,False
+0.3,lh_precentral,0.4422799458781706,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.3,lh_rostralanteriorcingulate,0.6567280613027547,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.3,lh_transversetemporal,0.45255552156992,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.3,rh_fusiform,0.401465690265531,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.3,rh_lateralorbitofrontal,0.6614659055028698,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,rh_paracentral,0.3902585849241003,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.3,rh_parahippocampal,0.4099571126734057,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.3,rh_precentral,0.4588642414770326,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_precentral,1,Primary motor cortex,Primary,False
+0.3,rh_rostralanteriorcingulate,0.6795151775418649,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.3,rh_transversetemporal,0.45255552156992,Gifted,maxSW,aparc,Node Versatility,0.18979892662090747,0.19409988883035953,0.38389881545126703,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.4,lh_caudalanteriorcingulate,0.8164664943281833,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,lh_parahippocampal,0.6666271654068767,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.4,lh_posteriorcingulate,0.7796893308521057,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,lh_precuneus,0.6180328054561888,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.4,lh_rostralanteriorcingulate,1.0,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_caudalanteriorcingulate,0.7637904119841327,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_fusiform,0.6378534943763391,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.4,rh_lateralorbitofrontal,0.5860557010742702,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.4,rh_posteriorcingulate,0.7693814331436345,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,rh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_rostralanteriorcingulate,0.9996095307023768,Gifted,maxSW,aparc,Node Versatility,0.3406417470350645,0.24511075830423115,0.5857525053392957,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.5,lh_bankssts,0.5146719671082162,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,lh_bankssts,3,Association cortex - type 2,Association,True
+0.5,lh_insula,0.4877725449677941,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,lh_insula,7,Insular cortex,Insular,False
+0.5,lh_parsorbitalis,0.5401648799438433,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,lh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.5,lh_posteriorcingulate,1.0,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.5,lh_precuneus,0.8790152415078598,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.5,lh_transversetemporal,0.6075587981768007,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,lh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.5,rh_bankssts,0.5146719671082162,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_bankssts,3,Association cortex - type 2,Association,True
+0.5,rh_insula,0.4877725449677941,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_insula,7,Insular cortex,Insular,False
+0.5,rh_parahippocampal,0.531727209615635,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.5,rh_parsorbitalis,0.5401648799438433,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.5,rh_posteriorcingulate,0.8101856041509717,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.5,rh_precuneus,0.4690116590114653,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.5,rh_transversetemporal,0.5872206466364913,Gifted,maxSW,aparc,Node Versatility,0.22662819538336373,0.21621653022174908,0.4428447256051128,True,rh_transversetemporal,5,Primary sensory cortex,Primary,False
+0.6,lh_caudalanteriorcingulate,0.7957627220110374,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.6,lh_entorhinal,0.5414757790035202,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,lh_entorhinal,6,Limbic cortex,Limbic,False
+0.6,lh_parsorbitalis,0.5414757790035202,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,lh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.6,lh_postcentral,0.4846114610654813,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,lh_postcentral,5,Primary sensory cortex,Primary,False
+0.6,lh_posteriorcingulate,0.6642792248342257,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,lh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.6,lh_precuneus,0.5948509708385256,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.6,rh_entorhinal,0.5414757790035202,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,rh_entorhinal,6,Limbic cortex,Limbic,False
+0.6,rh_inferiortemporal,0.5519772073396512,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,rh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.6,rh_parahippocampal,0.5288879019142251,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.6,rh_parsorbitalis,0.5414757790035202,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,rh_parsorbitalis,4,Secondary sensory cortex,Secondary,False
+0.6,rh_posteriorcingulate,0.5622729620286322,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,rh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.6,rh_precuneus,0.8706878868435873,Gifted,maxSW,aparc,Node Versatility,0.2700512913259167,0.18577430731302824,0.45582559863894495,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.7,lh_cuneus,0.6039767279598925,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,lh_frontalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_frontalpole,3,Association cortex - type 2,Association,True
+0.7,lh_lateraloccipital,0.6267186402718173,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_lateraloccipital,4,Secondary sensory cortex,Secondary,False
+0.7,lh_middletemporal,0.6104365455157164,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_middletemporal,2,Association cortex - type 1,Association,True
+0.7,lh_pericalcarine,0.9965756313372016,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.7,lh_superiorfrontal,0.6339189885849104,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.7,lh_temporalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,lh_temporalpole,2,Association cortex - type 1,Association,True
+0.7,rh_cuneus,0.6039767279598925,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,rh_frontalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_frontalpole,3,Association cortex - type 2,Association,True
+0.7,rh_inferiortemporal,0.6107616878342428,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.7,rh_middletemporal,0.6104365455157164,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_middletemporal,2,Association cortex - type 1,Association,True
+0.7,rh_pericalcarine,0.9965756313372016,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.7,rh_postcentral,0.6949512432122028,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_postcentral,5,Primary sensory cortex,Primary,False
+0.7,rh_temporalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.2973634080847785,0.29946257599834053,0.596825984083119,True,rh_temporalpole,2,Association cortex - type 1,Association,True
+0.8,lh_frontalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.24386581676015595,0.2467466963077141,0.49061251306787,True,lh_frontalpole,3,Association cortex - type 2,Association,True
+0.8,lh_rostralanteriorcingulate,0.645363279813073,Gifted,maxSW,aparc,Node Versatility,0.24386581676015595,0.2467466963077141,0.49061251306787,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.8,lh_temporalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.24386581676015595,0.2467466963077141,0.49061251306787,True,lh_temporalpole,2,Association cortex - type 1,Association,True
+0.8,rh_frontalpole,1.0,Gifted,maxSW,aparc,Node Versatility,0.24386581676015595,0.2467466963077141,0.49061251306787,True,rh_frontalpole,3,Association cortex - type 2,Association,True
+0.8,rh_rostralanteriorcingulate,0.7074139602309438,Gifted,maxSW,aparc,Node Versatility,0.24386581676015595,0.2467466963077141,0.49061251306787,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.8,rh_temporalpole,0.998152956772169,Gifted,maxSW,aparc,Node Versatility,0.24386581676015595,0.2467466963077141,0.49061251306787,True,rh_temporalpole,2,Association cortex - type 1,Association,True
+0.9,lh_frontalpole,0.8502360996322444,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,lh_frontalpole,3,Association cortex - type 2,Association,True
+0.9,lh_medialorbitofrontal,0.6208230639270965,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.9,lh_middletemporal,0.5744708974270938,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,lh_middletemporal,2,Association cortex - type 1,Association,True
+0.9,lh_parahippocampal,0.7322568852498695,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.9,lh_rostralanteriorcingulate,0.5937058362104148,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,lh_temporalpole,0.8502360996322444,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,lh_temporalpole,2,Association cortex - type 1,Association,True
+0.9,rh_caudalanteriorcingulate,0.5632499006003524,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,rh_frontalpole,0.8502360996322444,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,rh_frontalpole,3,Association cortex - type 2,Association,True
+0.9,rh_lateralorbitofrontal,0.615937802020538,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.9,rh_middletemporal,0.5744708974270938,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,rh_middletemporal,2,Association cortex - type 1,Association,True
+0.9,rh_rostralanteriorcingulate,0.7393219338712375,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,rh_temporalpole,0.8502360996322444,Gifted,maxSW,aparc,Node Versatility,0.3538140046288232,0.20805161659717183,0.561865621225995,True,rh_temporalpole,2,Association cortex - type 1,Association,True
+1.0,lh_entorhinal,0.6744409715264073,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,lh_entorhinal,6,Limbic cortex,Limbic,False
+1.0,lh_lateraloccipital,0.7892643349311019,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,lh_lateraloccipital,4,Secondary sensory cortex,Secondary,False
+1.0,lh_lingual,0.8629757774545642,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,lh_parahippocampal,0.7016718114909969,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+1.0,rh_caudalanteriorcingulate,0.6450649251063892,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+1.0,rh_entorhinal,0.6744409715264073,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,rh_entorhinal,6,Limbic cortex,Limbic,False
+1.0,rh_precentral,0.9960549224821296,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,rh_precentral,1,Primary motor cortex,Primary,False
+1.0,rh_rostralanteriorcingulate,0.8574164105720529,Gifted,maxSW,aparc,Node Versatility,0.44499234300324075,0.19753319802879915,0.6425255410320398,True,rh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False

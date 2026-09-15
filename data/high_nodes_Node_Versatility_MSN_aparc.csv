@@ -1,0 +1,179 @@
+Density,Region,Metric_Value,Group,Method,Parcellation,Feature,Mean_Metric,SD_Metric,High_Threshold,Is_High_Node,Mapping_Region,Von_Economo_Class,Von_Economo_Label,Broad_Category,Is_Association_Cortex
+0.05,lh_insula,0.3477097621193888,Control,MSN,aparc,Node Versatility,0.10804316524870125,0.21493168758984582,0.3229748528385471,True,lh_insula,7,Insular cortex,Insular,False
+0.05,rh_caudalanteriorcingulate,1.0,Control,MSN,aparc,Node Versatility,0.10804316524870125,0.21493168758984582,0.3229748528385471,True,rh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.05,rh_caudalmiddlefrontal,1.0,Control,MSN,aparc,Node Versatility,0.10804316524870125,0.21493168758984582,0.3229748528385471,True,rh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.05,rh_posteriorcingulate,1.0,Control,MSN,aparc,Node Versatility,0.10804316524870125,0.21493168758984582,0.3229748528385471,True,rh_posteriorcingulate,6,Limbic cortex,Limbic,False
+0.1,lh_medialorbitofrontal,1.0,Control,MSN,aparc,Node Versatility,0.0621932890541775,0.17467385403150498,0.2368671430856825,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.1,rh_inferiorparietal,0.3170864588942644,Control,MSN,aparc,Node Versatility,0.0621932890541775,0.17467385403150498,0.2368671430856825,True,rh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.1,rh_medialorbitofrontal,1.0,Control,MSN,aparc,Node Versatility,0.0621932890541775,0.17467385403150498,0.2368671430856825,True,rh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.1,rh_supramarginal,0.3170864588942644,Control,MSN,aparc,Node Versatility,0.0621932890541775,0.17467385403150498,0.2368671430856825,True,rh_supramarginal,3,Association cortex - type 2,Association,True
+0.15,lh_medialorbitofrontal,1.0,Control,MSN,aparc,Node Versatility,0.10100084187038465,0.1717825510045989,0.27278339287498354,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.15,rh_cuneus,0.30136685634676,Control,MSN,aparc,Node Versatility,0.10100084187038465,0.1717825510045989,0.27278339287498354,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.15,rh_medialorbitofrontal,1.0,Control,MSN,aparc,Node Versatility,0.10100084187038465,0.1717825510045989,0.27278339287498354,True,rh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.2,lh_medialorbitofrontal,1.0,Control,MSN,aparc,Node Versatility,0.041258293866076705,0.16770523652991948,0.2089635303959962,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.2,rh_medialorbitofrontal,1.0,Control,MSN,aparc,Node Versatility,0.041258293866076705,0.16770523652991948,0.2089635303959962,True,rh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,lh_fusiform,1.0,Control,MSN,aparc,Node Versatility,0.12712566276615409,0.17733564715287908,0.3044613099190332,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.3,lh_lateralorbitofrontal,0.4070654706618266,Control,MSN,aparc,Node Versatility,0.12712566276615409,0.17733564715287908,0.3044613099190332,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,rh_fusiform,1.0,Control,MSN,aparc,Node Versatility,0.12712566276615409,0.17733564715287908,0.3044613099190332,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.3,rh_lateralorbitofrontal,0.4070654706618266,Control,MSN,aparc,Node Versatility,0.12712566276615409,0.17733564715287908,0.3044613099190332,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.4,lh_cuneus,1.0,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.4,lh_lingual,1.0,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.4,lh_pericalcarine,0.5750621683665926,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.4,lh_precuneus,1.0,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.4,rh_cuneus,0.7585520761706234,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.4,rh_lingual,1.0,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.4,rh_pericalcarine,0.5750621683665926,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.4,rh_precuneus,1.0,Control,MSN,aparc,Node Versatility,0.2637794546719622,0.2541647481336754,0.5179442028056376,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.5,lh_cuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.5,lh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.5,lh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.5,lh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.5,rh_cuneus,0.7270187208052689,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.5,rh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.5,rh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.5,rh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.6,lh_cuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.6,lh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.6,lh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.6,lh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.6,rh_cuneus,0.7270187208052689,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.6,rh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.6,rh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.6,rh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.7,lh_cuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,lh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.7,lh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.7,lh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.7,rh_cuneus,0.7270187208052689,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,rh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.7,rh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.7,rh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.8,lh_cuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.8,lh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.8,lh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.8,lh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.8,rh_cuneus,0.7270187208052689,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.8,rh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.8,rh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.8,rh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.9,lh_cuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.9,lh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.9,lh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.9,lh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.9,rh_cuneus,0.7270187208052689,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.9,rh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.9,rh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+0.9,rh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_precuneus,2,Association cortex - type 1,Association,True
+1.0,lh_cuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+1.0,lh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,lh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_pericalcarine,5,Primary sensory cortex,Primary,False
+1.0,lh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,lh_precuneus,2,Association cortex - type 1,Association,True
+1.0,rh_cuneus,0.7270187208052689,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+1.0,rh_lingual,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,rh_pericalcarine,0.5572972180959765,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_pericalcarine,5,Primary sensory cortex,Primary,False
+1.0,rh_precuneus,0.9536492205035164,Control,MSN,aparc,Node Versatility,0.23326781214012082,0.2503472480804345,0.48361506022055534,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.05,lh_inferiorparietal,0.2430532071250933,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.05,lh_inferiortemporal,0.2328815157539108,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.05,lh_middletemporal,0.2328815157539108,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_middletemporal,2,Association cortex - type 1,Association,True
+0.05,lh_precentral,0.2430532071250933,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.05,lh_superiorfrontal,0.4558465333077063,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.05,lh_superiortemporal,0.2328815157539108,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_superiortemporal,3,Association cortex - type 2,Association,True
+0.05,lh_supramarginal,0.4558465333077063,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,lh_supramarginal,3,Association cortex - type 2,Association,True
+0.05,rh_inferiorparietal,0.2377849706625256,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.05,rh_inferiortemporal,0.2328815157539108,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_inferiortemporal,2,Association cortex - type 1,Association,True
+0.05,rh_middletemporal,0.2328815157539108,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_middletemporal,2,Association cortex - type 1,Association,True
+0.05,rh_precentral,0.2430532071250933,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_precentral,1,Primary motor cortex,Primary,False
+0.05,rh_superiorfrontal,0.4558465333077063,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_superiorfrontal,2,Association cortex - type 1,Association,True
+0.05,rh_superiortemporal,0.2328815157539108,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_superiortemporal,3,Association cortex - type 2,Association,True
+0.05,rh_supramarginal,0.2377849706625256,Gifted,MSN,aparc,Node Versatility,0.10294784585057418,0.11057531762085218,0.21352316347142636,True,rh_supramarginal,3,Association cortex - type 2,Association,True
+0.1,lh_precentral,0.1561691439613053,Gifted,MSN,aparc,Node Versatility,0.04656740442047002,0.09031649010074774,0.13688389452121777,True,lh_precentral,1,Primary motor cortex,Primary,False
+0.1,lh_rostralmiddlefrontal,0.1561691439613053,Gifted,MSN,aparc,Node Versatility,0.04656740442047002,0.09031649010074774,0.13688389452121777,True,lh_rostralmiddlefrontal,3,Association cortex - type 2,Association,True
+0.1,rh_inferiorparietal,0.4574588326450688,Gifted,MSN,aparc,Node Versatility,0.04656740442047002,0.09031649010074774,0.13688389452121777,True,rh_inferiorparietal,3,Association cortex - type 2,Association,True
+0.1,rh_paracentral,0.3757625729329313,Gifted,MSN,aparc,Node Versatility,0.04656740442047002,0.09031649010074774,0.13688389452121777,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.1,rh_supramarginal,0.4574588326450688,Gifted,MSN,aparc,Node Versatility,0.04656740442047002,0.09031649010074774,0.13688389452121777,True,rh_supramarginal,3,Association cortex - type 2,Association,True
+0.15,lh_caudalanteriorcingulate,0.2690894142033879,Gifted,MSN,aparc,Node Versatility,0.13483588117996226,0.1256317408372745,0.2604676220172367,True,lh_caudalanteriorcingulate,6,Limbic cortex,Limbic,False
+0.15,lh_caudalmiddlefrontal,0.2640142495088713,Gifted,MSN,aparc,Node Versatility,0.13483588117996226,0.1256317408372745,0.2604676220172367,True,lh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.15,rh_cuneus,0.7037271769892949,Gifted,MSN,aparc,Node Versatility,0.13483588117996226,0.1256317408372745,0.2604676220172367,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.15,rh_lingual,0.7037271769892949,Gifted,MSN,aparc,Node Versatility,0.13483588117996226,0.1256317408372745,0.2604676220172367,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.15,rh_postcentral,0.4339653691831149,Gifted,MSN,aparc,Node Versatility,0.13483588117996226,0.1256317408372745,0.2604676220172367,True,rh_postcentral,5,Primary sensory cortex,Primary,False
+0.2,lh_insula,0.1858458434305382,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,lh_insula,7,Insular cortex,Insular,False
+0.2,rh_bankssts,0.2232367954723025,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,rh_bankssts,3,Association cortex - type 2,Association,True
+0.2,rh_caudalmiddlefrontal,0.2491608294540375,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,rh_caudalmiddlefrontal,2,Association cortex - type 1,Association,True
+0.2,rh_insula,0.3175920457883517,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,rh_insula,7,Insular cortex,Insular,False
+0.2,rh_paracentral,0.2431256091571077,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,rh_paracentral,1,Primary motor cortex,Primary,False
+0.2,rh_parahippocampal,0.1702697801365261,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,rh_parahippocampal,6,Limbic cortex,Limbic,False
+0.2,rh_parstriangularis,0.1871428590813917,Gifted,MSN,aparc,Node Versatility,0.0555498769278194,0.06682915992314097,0.12237903685096037,True,rh_parstriangularis,2,Association cortex - type 1,Association,True
+0.3,lh_lateralorbitofrontal,0.2573822669276931,Gifted,MSN,aparc,Node Versatility,0.060646404913712065,0.10502775211231262,0.16567415702602467,True,lh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,lh_medialorbitofrontal,0.5777429623318164,Gifted,MSN,aparc,Node Versatility,0.060646404913712065,0.10502775211231262,0.16567415702602467,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.3,lh_parsopercularis,0.2486033213105653,Gifted,MSN,aparc,Node Versatility,0.060646404913712065,0.10502775211231262,0.16567415702602467,True,lh_parsopercularis,2,Association cortex - type 1,Association,True
+0.3,rh_lateralorbitofrontal,0.5777429623318164,Gifted,MSN,aparc,Node Versatility,0.060646404913712065,0.10502775211231262,0.16567415702602467,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.4,lh_cuneus,0.8186807293220085,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.4,lh_fusiform,0.5264320390611861,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.4,lh_lingual,0.8186807293220085,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.4,lh_medialorbitofrontal,0.6003781316310094,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,lh_medialorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.4,lh_precuneus,0.8186807293220085,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.4,lh_rostralanteriorcingulate,0.6305391787621921,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.4,rh_cuneus,0.8186807293220085,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.4,rh_lateralorbitofrontal,0.6057510169804189,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,rh_lateralorbitofrontal,4,Secondary sensory cortex,Secondary,False
+0.4,rh_lingual,0.8186807293220085,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.4,rh_precuneus,0.8186807293220085,Gifted,MSN,aparc,Node Versatility,0.3089048405625239,0.2026566474973191,0.5115614880598429,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.5,lh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.5,lh_fusiform,0.9980943216645264,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.5,lh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.5,lh_parahippocampal,0.636424176454522,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.5,lh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.5,lh_rostralanteriorcingulate,0.5192537958830459,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.5,rh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.5,rh_fusiform,1.0,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.5,rh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.5,rh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.6,lh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.6,lh_fusiform,0.9980943216645264,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.6,lh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.6,lh_parahippocampal,0.636424176454522,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.6,lh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.6,lh_rostralanteriorcingulate,0.5192537958830459,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.6,rh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.6,rh_fusiform,1.0,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.6,rh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.6,rh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.7,lh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,lh_fusiform,0.9980943216645264,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.7,lh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.7,lh_parahippocampal,0.636424176454522,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.7,lh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.7,lh_rostralanteriorcingulate,0.5192537958830459,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.7,rh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.7,rh_fusiform,1.0,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.7,rh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.7,rh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.8,lh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.8,lh_fusiform,0.9980943216645264,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.8,lh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.8,lh_parahippocampal,0.636424176454522,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.8,lh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.8,lh_rostralanteriorcingulate,0.5192537958830459,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.8,rh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.8,rh_fusiform,1.0,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.8,rh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.8,rh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_precuneus,2,Association cortex - type 1,Association,True
+0.9,lh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.9,lh_fusiform,0.9980943216645264,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_fusiform,2,Association cortex - type 1,Association,True
+0.9,lh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+0.9,lh_parahippocampal,0.636424176454522,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+0.9,lh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_precuneus,2,Association cortex - type 1,Association,True
+0.9,lh_rostralanteriorcingulate,0.5192537958830459,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+0.9,rh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+0.9,rh_fusiform,1.0,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_fusiform,2,Association cortex - type 1,Association,True
+0.9,rh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+0.9,rh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_precuneus,2,Association cortex - type 1,Association,True
+1.0,lh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_cuneus,4,Secondary sensory cortex,Secondary,False
+1.0,lh_fusiform,0.9980943216645264,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_fusiform,2,Association cortex - type 1,Association,True
+1.0,lh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,lh_parahippocampal,0.636424176454522,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_parahippocampal,6,Limbic cortex,Limbic,False
+1.0,lh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_precuneus,2,Association cortex - type 1,Association,True
+1.0,lh_rostralanteriorcingulate,0.5192537958830459,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,lh_rostralanteriorcingulate,6,Limbic cortex,Limbic,False
+1.0,rh_cuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_cuneus,4,Secondary sensory cortex,Secondary,False
+1.0,rh_fusiform,1.0,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_fusiform,2,Association cortex - type 1,Association,True
+1.0,rh_lingual,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_lingual,4,Secondary sensory cortex,Secondary,False
+1.0,rh_precuneus,0.7559755887329005,Gifted,MSN,aparc,Node Versatility,0.289495862265075,0.22914939915588783,0.5186452614209629,True,rh_precuneus,2,Association cortex - type 1,Association,True
